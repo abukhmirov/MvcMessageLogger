@@ -1,0 +1,44 @@
+﻿
+<h1>All the Message Logger Statistics</h1>
+
+<div class="UsersMessageCount">
+    <h3>Users Message Count</h3>
+    @foreach (var userStat in ViewBag.UsersOrderedByMessageCount)
+    {
+
+        @userStat.UserName
+        <br />
+        @userStat.MessageCount
+        <br />
+
+    }
+</div>
+
+<br />
+
+<div class="MostCommonMessage">
+    <h3>Most Common Message</h3>
+    @ViewBag.MostCommonMessage
+</div>
+
+<br />
+
+<div class="MostCommonWord">
+    <h3>Most Common Word</h3>
+    
+    @ViewBag.MostCommonWord
+</div>
+
+<br />
+
+<div class="HourWithMostMessages">
+    <h3>Hour With Most Messages</h3>
+    @ViewBag.HourWithMostMessages
+</div>
+
+<br />
+
+<div class="BusiestDayOfWeek">
+    <h3>Busiest Day of the Week</h3>
+    @ViewBag.BusiestDayOfWeek
+</div>
