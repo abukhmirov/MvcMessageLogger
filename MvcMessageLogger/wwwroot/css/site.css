@@ -16,3 +16,38 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.indexBody {
+    background-color: #f0f2f5;
+}
+
+.user-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.login-button {
+    background-color: #1877f2;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+
+.add-user-button {
+    background-color: #42b72a;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+
+    .add-user-button:hover,
+    .login-button:hover {
+        opacity: 0.8;
+    }
+
+

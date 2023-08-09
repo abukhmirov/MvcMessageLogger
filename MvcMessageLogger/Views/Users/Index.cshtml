@@ -1,28 +1,33 @@
-﻿
-@model IEnumerable<User>
+﻿@model IEnumerable<User>
 
-<p>Users List</p>
 
-<ul>
-    @foreach (var user in Model)
-    {
-        <li>@user.Username</li>
-        <form method="get" action="/users/details/@user.Id">
-            <div class="login">
+ 
+    <title>Users List</title>
 
-                <button type="submit">Login</button>
-
+<div class="indexBody">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="user-card">
+                    <h4>Users List</h4>
+                    <ul class="list-unstyled">
+                        @foreach (var user in Model)
+                        {
+                            <li>
+                                @user.Username
+                                <form method="get" action="/users/details/@user.Id">
+                                    <button type="submit" class="login-button">Login</button>
+                                </form>
+                            </li>
+                        }
+                    </ul>
+                    <form method="get" action="/users/new">
+                        <button type="submit" class="add-user-button">Add User</button>
+                    </form>
+                </div>
             </div>
-
-        </form>
-    }
-
-</ul>
-<form method="get" action="/users/new">
-    <div class="newbutton">
-
-        <button type="submit">Add User</button>
-
+        </div>
     </div>
+</div>
+  
 
-</form>

@@ -1,13 +1,15 @@
 ﻿@model User
 
+<div class="addmessage", id="title">
+    <h1>Add message</h1>
+</div>
 
-<h1>Add message</h1>
 <form method="post" action="/users/@Model.Id/messages">
-    <div>
+    <div class="input-group">
         <label for="Content">Content:</label>
-        <input type="content" id="Content" name="Content" />
+        <input type="text" id="Content" name="Content" />
     </div>
-    <div>
+    <div class=" =submitbutton">
         <button type="submit">Submit Message</button>
     </div>
 </form>
