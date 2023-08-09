@@ -110,47 +110,5 @@ namespace MvcMessageLoggerTests
 
         }
 
-        //[Fact]
-        //public async Task NewMessage_ShowsForm()
-        //{
-        //    var context = GetDbContext();
-        //    var client = _factory.CreateClient();
-
-        //    var user1 = new User { Name = "John", Username = "Doe" };
-
-        //    var message = new Message { Content = "hello", CreatedAt = new DateTime(2000, 2, 1).ToUniversalTime() };
-
-        //    user1.Messages.Add(message);
-        //    context.Users.Add(user1);
-        //    context.SaveChanges();
-
-        //    var response = await client.GetAsync("/users/1/messages/new");
-        //    response.EnsureSuccessStatusCode();
-
-        //    var html = await response.Content.ReadAsStringAsync();
-
-        //}
-
-        //[Fact]
-        //public async Task CreateMessage_AddsMessageToDB()
-        //{
-        //    var context = GetDbContext();
-        //    var client = _factory.CreateClient();
-        //    var user = new User { Name = "John", Username = "Doe" };
-        //    context.Users.Add(user);
-        //    context.SaveChanges();
-
-        //    var formData = new Dictionary<string, string>
-        //    {
-        //        {"Content","Hello" }
-        //    };
-
-
-        //    var response = await client.PostAsync($"/users/{user.Id}/messages", new FormUrlEncodedContent(formData));
-  
-        //    var html = await response.Content.ReadAsStringAsync();
-
-        //    Assert.Contains("Hello", html);
-        //}
     }
 }
