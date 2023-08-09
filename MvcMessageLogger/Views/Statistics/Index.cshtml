@@ -31,6 +31,21 @@
 
 <br />
 
+<div class="MostCommonWordByUser">
+    <h3>Most Common Word by User</h3>
+    @foreach (var userWordStat in ViewBag.MostCommonWordByUser)
+    {
+        <div>
+            <strong>@userWordStat.UserName</strong>
+            <br />
+            @userWordStat.MostCommonWord
+        </div>
+        <br />
+    }
+</div>
+
+<br />
+
 <div class="HourWithMostMessages">
     <h3>Hour With Most Messages</h3>
     @ViewBag.HourWithMostMessages
