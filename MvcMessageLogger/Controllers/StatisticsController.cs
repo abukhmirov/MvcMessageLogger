@@ -37,14 +37,14 @@ namespace MvcMessageLogger.Controllers
             var mostCommonMessage = _context.Messages
              .GroupBy(m => m.Content)
              .OrderByDescending(g => g.Count())
-             .Select(g => g.Key)  
+             .Select(g => g.Key)
              .First();
 
             ViewBag.MostCommonMessage = mostCommonMessage;
 
 
 
-           //Most common word overall
+            //Most common word overall
             var messages = _context.Messages.Select(m => m.Content).AsEnumerable();
 
             var mostCommonWord = messages
@@ -57,7 +57,7 @@ namespace MvcMessageLogger.Controllers
             ViewBag.MostCommonWord = mostCommonWord;
 
 
-            
+
             // Hour with the most messages
             var hourWithMostMessages = _context.Messages
                 .GroupBy(m => m.CreatedAt.Hour)
@@ -80,12 +80,37 @@ namespace MvcMessageLogger.Controllers
 
             ViewBag.BusiestDayOfWeek = busiestDayOfWeek;
 
+
+
+
+            // Most common word by user
+            var mostCommonWordByUser = _context.Users
+    .Select(u => new
+    {
+        UserName = u.Name,
+        Messages = u.Messages.Select(m => m.Content)
+    })
+    .ToList() // Execute the query to retrieve user data
+    .Select(u => new
+    {
+        UserName = u.UserName,
+        MostCommonWord = u.Messages
+            .SelectMany(content => content.Split(new[] { ' ', '.', ',', '!', '?' }))
+            .GroupBy(word => word.ToLower())
+            .OrderByDescending(group => group.Count())
+            .Select(group => group.Key)
+            .FirstOrDefault()
+    })
+    .ToList();
+
+            ViewBag.MostCommonWordByUser = mostCommonWordByUser;
+
             return View();
 
 
-            return View();
+
         }
-       
-       
+
+
     }
 }
