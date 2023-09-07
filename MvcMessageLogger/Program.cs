@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MvcMessageLogger.DataAccess;
+using System.Security.Cryptography;
+
+//HashAlgorithm sha = SHA256.Create();
 
 var builder = WebApplication.CreateBuilder(args);
 
