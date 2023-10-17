@@ -1,6 +1,6 @@
 # MvcMessageLogger
 
-## Abstract/Elevator Pitch
+## Summary
 MvcMessageLogger is an ongoing project for learning at the Turing School of Programing Launch Program designed to log messages and display them
 
 
