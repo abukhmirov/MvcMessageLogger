@@ -18,10 +18,12 @@ MvcMessageLogger is an ongoing project for learning at the Turing School of Prog
 - **Turing Launch 2303 Students**: Review, Suggestions
 
 
-
+<!-- 
 ## Links to Wireframe/Planning docs
 - Wireframe would go here
 - Plans would go here
+-->
+
 
 ## Tech Stack
 - **Frontend**: CSS styling, Bootstrap, HTML
